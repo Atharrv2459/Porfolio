@@ -1,63 +1,53 @@
-import './App1.css'
-import { WDicons } from './Schoolimages/Skillicons';
-import { LDicons } from './Schoolimages/Skillicons';
-import { Ticons } from './Schoolimages/Skillicons';
-function Skills(){
-    return(
-        <div id="#skill" className='relative top-44 '>
-            <div className='flex flex-col items-center'>
-            <div className="text-7xl text-yellow-600 font-bold relative top-96">My Skills</div>
+import "./App1.css";
+import { WDicons } from "./Schoolimages/Skillicons";
+import { LDicons } from "./Schoolimages/Skillicons";
+import { Ticons } from "./Schoolimages/Skillicons";
 
-            <div>
-                {}
+function Skills() {
+    return (
+        <div id="skills" className="py-20">
+            {/* Title */}
+            <div className="text-center">
+                <h2 className="text-6xl font-extrabold text-yellow-500">My Skills</h2>
             </div>
-        </div>
-        <div className='flex flex-row m-8 justify-center gap-24'>
-        <div className='flex flex-col gap-4 relative top-96 my-12 p-4 bg-purple-950 rounded-2xl w-72 '>
-            <div className='text-center font-bold text-3xl'>Web development</div>
-        {WDicons.map((item,index)=>(
-          
-                <div key={index} className='flex flex-row gap-2 relative top-5'>
-                    <div> {item.icon}</div>
-                    <div className='relative top-1 text-2xl font-semibold'> {item.text}</div>
 
-                    </div>
-            
-                
-            
+            {/* Skills Sections */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto mt-16">
+                {/* Web Development */}
+                <div className="bg-purple-900 p-6 rounded-2xl w-72 mx-auto shadow-lg transition-transform transform hover:scale-105">
+                    <h3 className="text-center text-3xl font-bold text-white mb-6">Web Development</h3>
+                    {WDicons.map((item, index) => (
+                        <div key={index} className="flex flex-row items-center gap-3 mb-4">
+                            <div>{item.icon}</div>
+                            <p className="text-2xl font-semibold">{item.text}</p>
+                        </div>
+                    ))}
+                </div>
 
-        ))}
-        </div>
-        <div className='flex flex-col gap-4 relative top-96 my-12 p-4  bg-gradient-to-r from-purple-500 to-purple-800 rounded-2xl w-72'>
-        {LDicons.map((item,index)=>(
-          
-                <div key={index} className='flex flex-row gap-2'>
-                    <div> {item.icon}</div>
-                    <div className='relative top-1 text-2xl font-semibold'> {item.text}</div>
+                {/* Programming & Databases */}
+                <div className="bg-purple-900 p-6 rounded-2xl w-72 mx-auto shadow-lg transition-transform transform hover:scale-105">
+                    <h3 className="text-center text-3xl font-bold text-white mb-6">Languages & Databases</h3>
+                    {LDicons.map((item, index) => (
+                        <div key={index} className="flex flex-row items-center gap-3 mb-4">
+                            <div>{item.icon}</div>
+                            <p className="text-2xl font-semibold">{item.text}</p>
+                        </div>
+                    ))}
+                </div>
 
-                    </div>
-            
-                
-            
-
-        ))}
-        </div>
-        <div className='flex flex-col gap-4 relative top-96 my-12 p-4  bg-purple-950 rounded-2xl w-72'>
-        {Ticons.map((item,index)=>(
-          
-                <div key={index} className='flex flex-row gap-2'>
-                    <div> {item.icon}</div>
-                    <div className='relative top-1 text-2xl font-semibold'> {item.text}</div>
-
-                    </div>
-            
-                
-            
-
-        ))}
-        </div>
-        </div>
+                {/* Tools & Technologies */}
+                <div className="bg-purple-900 p-6 rounded-2xl w-72 mx-auto shadow-lg transition-transform transform hover:scale-105">
+                    <h3 className="text-center text-3xl font-bold text-white mb-6">Tools & Technologies</h3>
+                    {Ticons.map((item, index) => (
+                        <div key={index} className="flex flex-row items-center gap-3 mb-4">
+                            <div>{item.icon}</div>
+                            <p className="text-2xl font-semibold">{item.text}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
         </div>
     );
 }
-export default Skills
+
+export default Skills;

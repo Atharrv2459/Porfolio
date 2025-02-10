@@ -21,7 +21,7 @@ const images = [
 
 const ImageSlider = () => {
   return (<div className="relative top-96">
-    <div id="Certifications" className="text-center text-7xl text-yellow-400 relative top-72"> My certifications</div>    
+    <div id="Certifications" className="text-center text-6xl text-yellow-400 font-extrabold relative top-72"> My certifications</div>    
     <div className="w-1/2 mx-auto relative top-96">
       <Swiper
         modules={[Navigation, Pagination]}

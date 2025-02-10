@@ -9,8 +9,9 @@ import About from "./About1"
 import ImageSlider from "./Certificates"
 import { SiFacebook , SiInstagram , SiLinkedin , SiGithub , SiGmail } from "react-icons/si"
 import ContactForm from "./ContactForm"
+import Project from "./Project"
 function App(){
-    return(<div className="bg-gradient-to-r">
+    return(<div className="bg-blue-950">
         <Navbar />
         <div className='flex flex-row my-10 justify-center relative gap-28 top-28 right-28'>
             <div className='flex flex-col gap-5'>
@@ -21,7 +22,7 @@ function App(){
                 <div className="flex flex-row gap-5 my-20">
                     {SocialMedia.map((item,index) => (
                         <div className="flex">
-                            <a key={index} href={item.src} className="hover:text-yellow-500">{item.icon}</a>
+                            <a key={index} href={item.src} className="transition-transform transform hover:scale-125">{item.icon}</a>
                             </div>
 
                     ))
@@ -34,8 +35,10 @@ function App(){
                 <div><img src={myImage} className="rounded-full h-40 w-40"></img></div>
                 </div>
                 <About />
+
                 
                 <Skills />
+                <Project />
                 <ImageSlider />
                 <br></br>
                 <br>
