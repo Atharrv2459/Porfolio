@@ -18,10 +18,10 @@ const ContactForm = () => {
     e.preventDefault();
     emailjs
       .send(
-        "service_xxxxxx", // Replace with your EmailJS Service ID
-        "template_xxxxxx", // Replace with your EmailJS Template ID
+        "service_xxxxxx", 
+        "template_xxxxxx", 
         formData,
-        "user_xxxxxx" // Replace with your EmailJS Public Key
+        "user_xxxxxx" 
       )
       .then(
         (response) => {
@@ -36,8 +36,8 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center md:justify-between px-6 md:px-24 py-16 bg-[#0A0E31] text-white">
-      {/* Left Side: Contact Info */}
+    <div id="contacts" className="flex flex-col md:flex-row items-center justify-center md:justify-between px-6 md:px-24 py-16 bg-[#0A0E31] text-white">
+  
       <div className="flex flex-col gap-6 text-center md:text-left mb-10 md:mb-0">
         <h2 className="text-4xl font-bold">Contact me</h2>
         <div className="flex items-center gap-4">
@@ -50,7 +50,7 @@ const ContactForm = () => {
         </div>
       </div>
 
-      {/* Right Side: Contact Form */}
+    
       <div className="w-full md:w-[40%] bg-white/10 p-6 rounded-lg shadow-lg">
         <h2 className="text-3xl font-bold mb-3">
           Connect with <span className="text-blue-500">me</span>

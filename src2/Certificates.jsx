@@ -10,18 +10,18 @@ import oracle4 from "./Certificates/Oracle4.jpg"
 
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css"; // Import basic Swiper styles
-import "swiper/css/navigation"; // Navigation (arrows)
-import "swiper/css/pagination"; // Pagination (dots)
+import "swiper/css"; 
+import "swiper/css/navigation"; 
+import "swiper/css/pagination"; 
 import { Navigation, Pagination } from "swiper/modules";
 
-// Array of images (Replace with your actual image URLs)
+
 const images = [
   java,dsa,oracle1,oracle2,oracle3,oracle4]
 
 const ImageSlider = () => {
-  return (<div className="relative top-96">
-    <div id="Certifications" className="text-center text-6xl text-yellow-400 font-extrabold relative top-72"> My certifications</div>    
+  return (<div id="Certifications" className="relative top-96">
+    <div className="text-center text-6xl text-yellow-400 font-extrabold relative top-72"> My certifications</div>    
     <div className="w-1/2 mx-auto relative top-96">
       <Swiper
         modules={[Navigation, Pagination]}

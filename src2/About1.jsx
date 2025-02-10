@@ -26,7 +26,7 @@ function About() {
             </div>
 
             {/* Education Section */}
-            <div className="mt-20 text-center">
+            <div id="education" className="mt-20 text-center">
                 <h2 className="text-6xl font-extrabold text-yellow-500 mb-12">My Education</h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
