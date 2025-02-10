@@ -13,7 +13,7 @@ import Project from "./Project"
 function App(){
     return(<div className="bg-blue-950">
         <Navbar />
-        <div className='flex flex-row my-10 justify-center relative gap-28 top-28 right-28'>
+        <div className="flex flex-col items-center justify-center my-10 mx-5 gap-10 md:flex-row md:gap-28 md:mx-10 md:top-28 relative md:right-28 relative">
             <div className='flex flex-col gap-5'>
                 <div className='text-7xl font-bold text-yellow-500'>
                     Hi I am Atharrv,
@@ -32,7 +32,7 @@ function App(){
 
 
                 </div>
-                <div><img src={myImage} className="rounded-full h-40 w-40"></img></div>
+                <div><img src={myImage} className="rounded-full h-40 w-40 md:bottom-24 relative"></img></div>
                 </div>
                 <About />
 
