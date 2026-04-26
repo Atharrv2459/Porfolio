@@ -13,9 +13,7 @@ function ResumeSection() {
               <p className="mt-3 text-slate-300">
                 View or download a PDF copy of my resume.
               </p>
-              <p className="mt-2 text-sm text-slate-400">
-                Hosted on Google Drive.
-              </p>
+              
             </div>
 
             <a
