@@ -3,6 +3,10 @@ import emailjs from "emailjs-com";
 import { SiGmail } from "react-icons/si";
 import { MdPhone } from "react-icons/md";
 
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -16,8 +20,16 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
+      alert(
+        "Email is not configured. Add VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, and VITE_EMAILJS_PUBLIC_KEY in a .env file (see .env.example)."
+      );
+      return;
+    }
+
     emailjs
-      .send("service_xxxxxx", "template_xxxxxx", formData, "user_xxxxxx")
+      .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formData, EMAILJS_PUBLIC_KEY)
       .then(
         () => {
           alert("Message sent successfully!");
@@ -25,7 +37,7 @@ const ContactForm = () => {
         },
         (error) => {
           alert("Failed to send message. Please try again.");
-          console.error("Error:", error);
+          console.error("EmailJS error:", error);
         }
       );
   };
@@ -67,7 +79,8 @@ const ContactForm = () => {
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6 md:p-8">
             <h3 className="text-xl font-semibold">Send a message</h3>
             <p className="mt-2 text-sm text-slate-400">
-              (EmailJS keys are placeholders — replace them to enable sending.)
+              Configure EmailJS via <span className="font-mono">.env</span> (see{" "}
+              <span className="font-mono">.env.example</span>) to enable sending.
             </p>
 
             <form onSubmit={handleSubmit} className="mt-6 space-y-4">

@@ -11,21 +11,20 @@ function ResumeSection() {
                 Resume
               </h2>
               <p className="mt-3 text-slate-300">
-                Download a PDF copy of my resume.
+                View or download a PDF copy of my resume.
               </p>
               <p className="mt-2 text-sm text-slate-400">
-                Add your file as <span className="font-mono">public\\resume.pdf</span>
-                to enable this button.
+                Hosted on Google Drive.
               </p>
             </div>
 
             <a
-              href="/resume.pdf"
+              href="https://drive.google.com/file/d/1R7zRqTysCWMBCPKOlChycgEQuGN1Tltz/view?usp=sharing"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center rounded-xl bg-yellow-400 px-6 py-3 font-semibold text-slate-950 hover:bg-yellow-300 transition"
             >
-              Download resume
+              View resume
             </a>
           </div>
         </div>

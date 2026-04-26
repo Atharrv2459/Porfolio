@@ -41,7 +41,7 @@ function App() {
                 View projects
               </a>
               <a
-                href="/resume.pdf"
+                href="https://drive.google.com/file/d/1R7zRqTysCWMBCPKOlChycgEQuGN1Tltz/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
                 className="rounded-xl border border-white/10 bg-white/5 px-5 py-3 font-semibold text-slate-100 hover:bg-white/10 transition"
