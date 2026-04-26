@@ -78,10 +78,6 @@ const ContactForm = () => {
 
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6 md:p-8">
             <h3 className="text-xl font-semibold">Send a message</h3>
-            <p className="mt-2 text-sm text-slate-400">
-              Configure EmailJS via <span className="font-mono">.env</span> (see{" "}
-              <span className="font-mono">.env.example</span>) to enable sending.
-            </p>
 
             <form onSubmit={handleSubmit} className="mt-6 space-y-4">
               <div>
